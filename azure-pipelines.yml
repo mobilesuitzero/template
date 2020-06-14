@@ -17,18 +17,16 @@ steps:
     testResultsFormat: 'NUnit'
     testResultsFiles: '$(System.DefaultWorkingDirectory)\*-armttk.xml'
   condition: always()
-  
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'PAYG-DevOps(1)(4f27b38c-ad3f-43d8-a9a3-01182e5e2f9a)'
+    azureResourceManagerConnection: 'PAYG-DevOps(4f27b38c-ad3f-43d8-a9a3-01182e5e2f9a)'
     subscriptionId: '4f27b38c-ad3f-43d8-a9a3-01182e5e2f9a'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'dchaodevop'
-    location: 'West US'
+    location: 'West US 2'
     templateLocation: 'Linked artifact'
-    csmFile: 'mainTemplate.json'
-    csmParametersFile: 'parameters.json'
+    csmFile: 'azuredeploy.json'
+    csmParametersFile: 'azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
-    deploymentName: 'dchaodevop'
-
