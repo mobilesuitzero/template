@@ -7,7 +7,7 @@ pool:
 steps:
 - task: RunARMTTKTests@1
   inputs:
-    templatelocation: '$(System.DefaultWorkingDirectory)\templates\'
+    templatelocation: '$(System.DefaultWorkingDirectory)\'
     resultLocation: '$(System.DefaultWorkingDirectory)\results'
 - task: PublishTestResults@2
   inputs:
