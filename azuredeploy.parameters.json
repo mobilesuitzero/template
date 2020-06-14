@@ -1,0 +1,117 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "resourceNamePrefix": {
+            "value": "dchaodevop"
+        },
+        "vnetDeploymentMethod": {
+            "value": "create a new VNet in the Autoscale resource group"
+        },
+        "vnetResourceGroupName": {
+            "value": "dchaodevop"
+        },
+        "vnetName": {
+            "value": "vnet"
+        },
+        "vnetAddressSpace": {
+            "value": "10.0.0.0/16"
+        },
+        "subnet1Name": {
+            "value": "subnet1"
+        },
+        "subnet1AddressRange": {
+            "value": "10.0.0.0/24"
+        },
+        "subnet2Name": {
+            "value": "subnet2"
+        },
+        "subnet2AddressRange": {
+            "value": "10.0.1.0/24"
+        },
+        "networkSecurityGroupName": {
+            "value": ""
+        },
+        "frontendIPDeploymentMethod": {
+            "value": "create new public IP address"
+        },
+        "frontendIPName": {
+            "value": "dchaodevop"
+        },
+        "loadBalancerIP": {
+            "value": "10"
+        },
+        "instanceType": {
+            "value": "Standard_F4"
+        },
+        "fosVersion": {
+            "value": "6.2.3"
+        },
+        "fortiGatePSKSecret": {
+            "value": null
+        },
+        "adminUsername": {
+            "value": "azureadmin"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "accessRestrictionIPRange": {
+            "value": "0.0.0.0/0"
+        },
+        "storageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "restAppID": {
+            "value": "3ccad610-f6e9-496e-bc07-13f05e70411d"
+        },
+        "restAppSecret": {
+            "value": "LxBZbl6-z9/yp6n-AteO.vqYJrFN9/6K"
+        },
+        "byolInstanceCount": {
+            "value": 2
+        },
+        "minBYOLInstanceCount": {
+            "value": 2
+        },
+        "maxBYOLInstanceCount": {
+            "value": 2
+        },
+        "paygInstanceCount": {
+            "value": 0
+        },
+        "minPAYGInstanceCount": {
+            "value": 0
+        },
+        "maxPAYGInstanceCount": {
+            "value": 6
+        },
+        "scaleOutThreshold": {
+            "value": 80
+        },
+        "scaleInThreshold": {
+            "value": 20
+        },
+        "masterElectionTimeout": {
+            "value": 90
+        },
+        "getLicenseGracePeriod": {
+            "value": 600
+        },
+        "heartBeatInterval": {
+            "value": 60
+        },
+        "heartBeatLossCount": {
+            "value": 3
+        },
+        "heartBeatDelayAllowance": {
+            "value": 30
+        },
+        "scriptTimeout": {
+            "value": 230
+        },
+        "packageResURL": {
+            "value": "https://github.com/fortinet/fortigate-autoscale/releases/download/2.0.7/fortigate-autoscale-azure-funcapp.zip"
+        }
+    }
+}
