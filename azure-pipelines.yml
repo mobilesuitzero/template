@@ -9,7 +9,7 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'template'
+    SourceFolder: '/'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
