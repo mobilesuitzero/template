@@ -7,6 +7,12 @@ pool:
 
 # ARM TTK test cases
 steps:
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'template'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
 - task: RunARMTTKTests@1
   inputs:
     templatelocation: '$(System.DefaultWorkingDirectory)\'
