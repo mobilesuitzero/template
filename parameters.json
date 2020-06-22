@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "ResourceNamePrefix": {
+            "value": "dchaodevop"
+        },
+        "VnetResourceGroupName": {
+            "value": "dchaodevop"
+        },
+        "VnetName": {
+            "value": "vnet"
+        },
+        "VnetAddressSpace": {
+            "value": "10.0.0.0/16"
+        },
+        "Subnet1Name": {
+            "value": "subnet1"
+        },
+        "Subnet1AddressRange": {
+            "value": "10.0.0.0/24"
+        },
+        "Subnet2Name": {
+            "value": "subnet2"
+        },
+        "Subnet2AddressRange": {
+            "value": "10.0.1.0/24"
+        },
+        "FrontendIPName": {
+            "value": "dchaoprave"
+        },
+        "FortiGatePSKSecret": {
+            "value": "Fortinet123#"
+        },
+        "AdminUsername": {
+            "value": "azureadmin"
+        },
+        "AdminPassword": {
+            "value": "Fortinet123#"
+        },
+        "accessRestrictionIPRange": {
+            "value": "0.0.0.0/0"
+        },
+        "restAppID": {
+            "value": "3ccad610-f6e9-496e-bc07-13f05e70411d"
+        },
+        "restAppSecret": {
+            "value": "LxBZbl6-z9/yp6n-AteO.vqYJrFN9/6K"
+        },
+        "packageResURL": {
+            "value": "https://github.com/fortinet/fortigate-autoscale/releases/download/2.0.7/fortigate-autoscale-azure-funcapp.zip"
+        }
+    }
+}
